@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dkwedjmdp50lj"]
 
+[ext_resource type="Script" uid="uid://bmgkywgusvoer" path="res://Scenes/Holes/Script/Hole.cs" id="1_ryxxg"]
 [ext_resource type="Texture2D" uid="uid://cqb4xa0igcg67" path="res://Scenes/MoleMachine/Textures/trou_bas.png" id="1_seffn"]
 [ext_resource type="Texture2D" uid="uid://so6yaq2xqqm0" path="res://Scenes/MoleMachine/Textures/trou_haut.png" id="2_cxpc7"]
-[ext_resource type="Texture2D" uid="uid://uhv3u6xswjts" path="res://Mole/Textures/mole.png" id="3_cxpc7"]
+[ext_resource type="PackedScene" uid="uid://ksebe64elnho" path="res://Moles/Mole.tscn" id="4_ryxxg"]
 
 [node name="Hole" type="Node2D" unique_id=1366338958]
+script = ExtResource("1_ryxxg")
 
 [node name="TrouHaut" type="Sprite2D" parent="." unique_id=537492730]
 position = Vector2(0, -2.6450007)
@@ -17,8 +19,13 @@ position = Vector2(0, 123)
 scale = Vector2(0.21688974, 0.29322973)
 texture = ExtResource("1_seffn")
 
-[node name="Mole" type="Sprite2D" parent="." unique_id=994451810]
-z_index = 1
-position = Vector2(0, 9.999985)
-scale = Vector2(0.5457317, 0.5457317)
-texture = ExtResource("3_cxpc7")
+[node name="Mole" parent="." unique_id=375732160 node_paths=PackedStringArray("SpawnPoint", "EndPoint") instance=ExtResource("4_ryxxg")]
+position = Vector2(0, 184.00003)
+SpawnPoint = NodePath("../SpawnPoint")
+EndPoint = NodePath("../EndPoint")
+
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=50187581]
+position = Vector2(0, 183)
+
+[node name="EndPoint" type="Node2D" parent="." unique_id=236795314]
+position = Vector2(0, -24.858215)
