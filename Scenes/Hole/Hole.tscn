@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dkwedjmdp50lj"]
+
+[ext_resource type="Texture2D" uid="uid://cqb4xa0igcg67" path="res://Scenes/MoleMachine/Textures/trou_bas.png" id="1_seffn"]
+[ext_resource type="Texture2D" uid="uid://so6yaq2xqqm0" path="res://Scenes/MoleMachine/Textures/trou_haut.png" id="2_cxpc7"]
+[ext_resource type="Texture2D" uid="uid://uhv3u6xswjts" path="res://Mole/Textures/mole.png" id="3_cxpc7"]
+
+[node name="Hole" type="Node2D" unique_id=1366338958]
+
+[node name="TrouHaut" type="Sprite2D" parent="." unique_id=537492730]
+position = Vector2(0, -13.645)
+scale = Vector2(0.21688974, 0.29322973)
+texture = ExtResource("2_cxpc7")
+
+[node name="TrouBas" type="Sprite2D" parent="." unique_id=388846404]
+z_index = 2
+position = Vector2(0, 12.817)
+scale = Vector2(0.21688974, 0.29322973)
+texture = ExtResource("1_seffn")
+
+[node name="Mole" type="Sprite2D" parent="." unique_id=994451810]
+z_index = 1
+position = Vector2(0, 108.095)
+scale = Vector2(0.5457317, 0.5457317)
+texture = ExtResource("3_cxpc7")

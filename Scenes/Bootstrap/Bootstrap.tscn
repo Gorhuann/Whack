@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bsykmkxoyi2je"]
 
 [ext_resource type="Script" uid="uid://bwsrjp3ikagfb" path="res://Scenes/Bootstrap/Bootstrap.cs" id="1_5gjb5"]
+[ext_resource type="PackedScene" uid="uid://da6tjjni8h4th" path="res://Scenes/MoleMachine/MoleMachine.tscn" id="2_5trkq"]
 
 [node name="Bootstrap" type="Node2D" unique_id=650052579 node_paths=PackedStringArray("rootNode")]
 script = ExtResource("1_5gjb5")
 rootNode = NodePath("Root")
+starterScene = ExtResource("2_5trkq")
 
 [node name="Root" type="Node2D" parent="." unique_id=1163980364]

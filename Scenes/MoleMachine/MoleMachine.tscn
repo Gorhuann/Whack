@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://da6tjjni8h4th"]
+
+[ext_resource type="PackedScene" uid="uid://dkwedjmdp50lj" path="res://Scenes/Hole/Hole.tscn" id="1_uv8pj"]
+
+[node name="MoleMachine" type="Node2D" unique_id=104650665]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2109082563]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=1492142718]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MachineBackground" type="ColorRect" parent="CanvasLayer" unique_id=1684658066]
+custom_minimum_size = Vector2(800, 0)
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20782402, 0.43799114, 0.15153193, 1)
+
+[node name="firstLayer" type="Node2D" parent="CanvasLayer" unique_id=1975996291]
+position = Vector2(0, 50)
+
+[node name="Hole" parent="CanvasLayer/firstLayer" unique_id=1366338958 instance=ExtResource("1_uv8pj")]
+position = Vector2(325, 102)
+
+[node name="Hole2" parent="CanvasLayer/firstLayer" unique_id=1365827567 instance=ExtResource("1_uv8pj")]
+position = Vector2(580, 102)
+
+[node name="Hole3" parent="CanvasLayer/firstLayer" unique_id=400154958 instance=ExtResource("1_uv8pj")]
+position = Vector2(833, 102)
+
+[node name="secondLayer" type="Node2D" parent="CanvasLayer" unique_id=629044887]
+position = Vector2(0, 243)
+
+[node name="Hole" parent="CanvasLayer/secondLayer" unique_id=689845758 instance=ExtResource("1_uv8pj")]
+position = Vector2(325, 102)
+
+[node name="Hole2" parent="CanvasLayer/secondLayer" unique_id=1175417711 instance=ExtResource("1_uv8pj")]
+position = Vector2(580, 102)
+
+[node name="Hole3" parent="CanvasLayer/secondLayer" unique_id=1064788338 instance=ExtResource("1_uv8pj")]
+position = Vector2(833, 102)
+
+[node name="thirdLayer" type="Node2D" parent="CanvasLayer" unique_id=1913778663]
+position = Vector2(0, 449)
+
+[node name="Hole" parent="CanvasLayer/thirdLayer" unique_id=393441943 instance=ExtResource("1_uv8pj")]
+position = Vector2(325, 102)
+
+[node name="Hole2" parent="CanvasLayer/thirdLayer" unique_id=1336893725 instance=ExtResource("1_uv8pj")]
+position = Vector2(580, 102)
+
+[node name="Hole3" parent="CanvasLayer/thirdLayer" unique_id=1651216700 instance=ExtResource("1_uv8pj")]
+position = Vector2(833, 102)
