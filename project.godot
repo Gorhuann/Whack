@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Whack"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+
+[autoload]
+
+NavigationManager="*uid://cpwf6a35ayj0y"
 
 [display]
 
