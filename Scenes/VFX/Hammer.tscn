@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b6hfdwk13px13"]
+
+[ext_resource type="Script" uid="uid://b0msopsd3gnup" path="res://Scenes/VFX/Hammer.cs" id="1_qk68l"]
+[ext_resource type="Texture2D" uid="uid://rr5py8l3w180" path="res://Assets/Placeholders/MARTO.png" id="2_wxbj2"]
+
+[node name="Hammer" type="Node2D" unique_id=1149031432]
+script = ExtResource("1_qk68l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=227608406]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_wxbj2")
