@@ -9,12 +9,12 @@ Holes = {
 0: NodePath("CanvasLayer/firstLayer/Hole A1"),
 1: NodePath("CanvasLayer/firstLayer/Hole A2"),
 2: NodePath("CanvasLayer/firstLayer/Hole A3"),
-4: NodePath("CanvasLayer/secondLayer/Hole B1"),
-5: NodePath("CanvasLayer/secondLayer/Hole B2"),
-6: NodePath("CanvasLayer/secondLayer/Hole B3"),
-7: NodePath("CanvasLayer/thirdLayer/Hole C1"),
-8: NodePath("CanvasLayer/thirdLayer/Hole C2"),
-9: NodePath("CanvasLayer/thirdLayer/Hole C3")
+3: NodePath("CanvasLayer/secondLayer/Hole B1"),
+4: NodePath("CanvasLayer/secondLayer/Hole B2"),
+5: NodePath("CanvasLayer/secondLayer/Hole B3"),
+6: NodePath("CanvasLayer/thirdLayer/Hole C1"),
+7: NodePath("CanvasLayer/thirdLayer/Hole C2"),
+8: NodePath("CanvasLayer/thirdLayer/Hole C3")
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2109082563]

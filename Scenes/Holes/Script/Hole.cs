@@ -4,4 +4,5 @@ namespace Whack.Scenes.Holes.Script;
 
 public partial class Hole : Node
 {
+    
 }
