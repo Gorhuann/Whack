@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bsykmkxoyi2je"]
+
+[ext_resource type="Script" uid="uid://bwsrjp3ikagfb" path="res://Scenes/Bootstrap/Bootstrap.cs" id="1_5gjb5"]
+
+[node name="Bootstrap" type="Node2D" unique_id=650052579 node_paths=PackedStringArray("rootNode")]
+script = ExtResource("1_5gjb5")
+rootNode = NodePath("Root")
+
+[node name="Root" type="Node2D" parent="." unique_id=1163980364]
