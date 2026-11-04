@@ -7,18 +7,18 @@
 [node name="Hole" type="Node2D" unique_id=1366338958]
 
 [node name="TrouHaut" type="Sprite2D" parent="." unique_id=537492730]
-position = Vector2(0, -13.645)
+position = Vector2(0, -2.6450007)
 scale = Vector2(0.21688974, 0.29322973)
 texture = ExtResource("2_cxpc7")
 
 [node name="TrouBas" type="Sprite2D" parent="." unique_id=388846404]
 z_index = 2
-position = Vector2(0, 12.817)
+position = Vector2(0, 123)
 scale = Vector2(0.21688974, 0.29322973)
 texture = ExtResource("1_seffn")
 
 [node name="Mole" type="Sprite2D" parent="." unique_id=994451810]
 z_index = 1
-position = Vector2(0, 108.095)
+position = Vector2(0, 9.999985)
 scale = Vector2(0.5457317, 0.5457317)
 texture = ExtResource("3_cxpc7")
