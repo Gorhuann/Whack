@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3qeiasukbvr6" path="res://Scenes/MoleMachine/MoleMachine.cs" id="1_jr1cq"]
 [ext_resource type="PackedScene" uid="uid://dkwedjmdp50lj" path="res://Scenes/Holes/Hole.tscn" id="1_uv8pj"]
+[ext_resource type="PackedScene" uid="uid://cj1tafl638acw" path="res://Scenes/UI/Stat/Stat.tscn" id="3_kk3j8"]
 
 [node name="MoleMachine" type="Node2D" unique_id=104650665 node_paths=PackedStringArray("Holes")]
 script = ExtResource("1_jr1cq")
@@ -19,45 +20,51 @@ Holes = {
 
 [node name="firstLayer" type="Node2D" parent="." unique_id=1975996291]
 z_index = 1
-position = Vector2(0, 50)
+position = Vector2(189, 50)
 
 [node name="Hole A1" parent="firstLayer" unique_id=1366338958 instance=ExtResource("1_uv8pj")]
-position = Vector2(325, 102)
+position = Vector2(379, 102)
 
 [node name="Hole A2" parent="firstLayer" unique_id=1365827567 instance=ExtResource("1_uv8pj")]
 position = Vector2(580, 102)
 
 [node name="Hole A3" parent="firstLayer" unique_id=400154958 instance=ExtResource("1_uv8pj")]
-position = Vector2(833, 102)
+position = Vector2(782, 102)
 
 [node name="secondLayer" type="Node2D" parent="." unique_id=629044887]
 z_index = 3
-position = Vector2(0, 243)
+position = Vector2(189, 243)
 
 [node name="Hole B1" parent="secondLayer" unique_id=689845758 instance=ExtResource("1_uv8pj")]
-position = Vector2(325, 102)
+position = Vector2(379, 102)
 
 [node name="Hole B2" parent="secondLayer" unique_id=1175417711 instance=ExtResource("1_uv8pj")]
 position = Vector2(580, 102)
 
 [node name="Hole B3" parent="secondLayer" unique_id=1064788338 instance=ExtResource("1_uv8pj")]
-position = Vector2(833, 102)
+position = Vector2(782, 102)
 
 [node name="thirdLayer" type="Node2D" parent="." unique_id=1913778663]
 z_index = 5
-position = Vector2(0, 449)
+position = Vector2(189, 449)
 
 [node name="Hole C1" parent="thirdLayer" unique_id=393441943 instance=ExtResource("1_uv8pj")]
-position = Vector2(325, 102)
+position = Vector2(379, 102)
 
 [node name="Hole C2" parent="thirdLayer" unique_id=1336893725 instance=ExtResource("1_uv8pj")]
 position = Vector2(580, 102)
 
 [node name="Hole C3" parent="thirdLayer" unique_id=1651216700 instance=ExtResource("1_uv8pj")]
-position = Vector2(833, 102)
+position = Vector2(782, 102)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1378683808]
-offset_right = 1207.0
-offset_bottom = 926.0
+offset_right = 1159.505
+offset_bottom = 652.56
 mouse_filter = 2
 color = Color(0.20784314, 0.4392157, 0.15294118, 1)
+
+[node name="Stat" parent="." unique_id=1484029318 instance=ExtResource("3_kk3j8")]
+offset_left = 63.0
+offset_top = 373.0
+offset_right = 63.0
+offset_bottom = 373.0

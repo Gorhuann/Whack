@@ -1,20 +1,25 @@
 using Godot;
 using Whack.Managers;
+using Whack.Scenes.UI.Stat.Script;
 
 namespace Whack.Scenes.Bootstrap;
 
 public partial class Bootstrap : Node2D
 {
     [Export]
-    public Node rootNode { get; set; }
+    public Node RootNode { get; set; }
 
     [Export]
-    public PackedScene starterScene { get; set; }
+    public PackedScene StarterScene { get; set; }
+    
+    [Export]
+    private StatResource StatResource { get; set; }
     
     public override void _Ready()
     {
         base._Ready();
-        NavigationManager.instance.rootScene = rootNode;
-        NavigationManager.instance.GoToScene(starterScene);
+        NavigationManager.instance.rootScene = RootNode;
+        NavigationManager.instance.GoToScene(StarterScene);
+        StatManager.Instance.SetupStatResource(StatResource);
     }
 }

@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://bwsrjp3ikagfb" path="res://Scenes/Bootstrap/Bootstrap.cs" id="1_5gjb5"]
 [ext_resource type="PackedScene" uid="uid://da6tjjni8h4th" path="res://Scenes/MoleMachine/MoleMachine.tscn" id="2_5trkq"]
 [ext_resource type="PackedScene" uid="uid://bd6ami0gaufwj" path="res://Scenes/Bootstrap/Camera/main_camera.tscn" id="3_818go"]
+[ext_resource type="Resource" uid="uid://1hkbb75xan6k" path="res://Scenes/UI/Stat/Resource/StatResource.tres" id="3_818go"]
 
 [node name="Bootstrap" type="Node2D" unique_id=650052579 node_paths=PackedStringArray("rootNode")]
 script = ExtResource("1_5gjb5")
 rootNode = NodePath("Root")
 starterScene = ExtResource("2_5trkq")
+StatResource = ExtResource("3_818go")
 
 [node name="Root" type="Node2D" parent="." unique_id=1163980364]
 
