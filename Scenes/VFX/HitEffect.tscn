@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b83oshcb1lb68" path="res://Scenes/VFX/Particles.cs" id="1_kumoh"]
 
 [sub_resource type="Curve" id="Curve_1t2en"]
-_data = [Vector2(0.19565216, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.19565216, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.18461537), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="HitEffect" type="Node2D" unique_id=635335944]
@@ -13,15 +13,15 @@ z_index = 98
 z_index = 98
 emitting = false
 amount = 30
-lifetime = 0.8
+lifetime = 0.4
 one_shot = true
 explosiveness = 1.0
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 196.66
-initial_velocity_max = 353.34
-scale_amount_min = 10.0
-scale_amount_max = 15.0
+initial_velocity_min = 349.99
+initial_velocity_max = 506.67
+scale_amount_min = 11.0
+scale_amount_max = 17.0
 scale_amount_curve = SubResource("Curve_1t2en")
 color = Color(0.99215686, 1, 1, 1)
 script = ExtResource("1_kumoh")
