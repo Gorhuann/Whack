@@ -1,8 +1,5 @@
-using System;
-using System.Security.Cryptography;
 using Godot;
 using Whack.Managers;
-using Whack.Scenes.Bootstrap.Camera;
 
 namespace Whack.Moles.Script;
 
@@ -12,15 +9,15 @@ public partial class Mole : Area2D
     [Export] private Node2D EndPoint { get; set; }
 
     private StatManager StatManager => StatManager.Instance;
-    
+    private CameraManager CameraManager => CameraManager.Instance;
+
     private bool _isDying;
     private Tween _dyingTween;
     private Tween _ascendingTween;
 
     [Export] public PackedScene HitEffectScene { get; set; }
-    [Export] public Scenes.Bootstrap.Camera.MainCamera Camera { get; set; }
-    
-    public override void _Ready(double delta)
+
+    public override void _Ready()
     {
         Position = SpawnPoint.Position;
         var startingTween = CreateTween();
@@ -47,11 +44,11 @@ public partial class Mole : Area2D
         if (_isDying) return;
         _isDying = true;
         this.AddChild(HitEffectScene.Instantiate());
-        (GetTree().GetFirstNodeInGroup("Camera") as MainCamera)?.Shake();
 
+        CameraManager.Shake();
         StatManager.IncreaseMoney();
-        StatManager.IncreaseMoleKilled();        
-        
+        StatManager.IncreaseMoleKilled();
+
         _ascendingTween?.Kill();
         _dyingTween?.Kill();
         _dyingTween = CreateTween();

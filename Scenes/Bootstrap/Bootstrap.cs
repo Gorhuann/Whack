@@ -15,11 +15,15 @@ public partial class Bootstrap : Node2D
     [Export]
     private StatResource StatResource { get; set; }
     
+    [Export]
+    private Camera2D MainCamera { get; set; }
+    
     public override void _Ready()
     {
         base._Ready();
         NavigationManager.instance.rootScene = RootNode;
         NavigationManager.instance.GoToScene(StarterScene);
         StatManager.Instance.SetupStatResource(StatResource);
+        CameraManager.Instance.SetupCamera(MainCamera);
     }
 }
