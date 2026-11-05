@@ -1,22 +1,28 @@
 [gd_scene format=3 uid="uid://ksebe64elnho"]
 
 [ext_resource type="Texture2D" uid="uid://uhv3u6xswjts" path="res://Moles/Textures/mole.png" id="1_c63lf"]
+[ext_resource type="PackedScene" uid="uid://cayymhk7g185u" path="res://Scenes/VFX/HitEffect.tscn" id="2_61vf2"]
 [ext_resource type="Script" uid="uid://dwksoelhwo62j" path="res://Moles/Script/Mole.cs" id="2_101bi"]
+[ext_resource type="PackedScene" uid="uid://b6hfdwk13px13" path="res://Scenes/VFX/Hammer.tscn" id="4_61vf2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
-radius = 78.814606
+radius = 137.43013
 
 [node name="Mole" type="Area2D" unique_id=571088668]
 z_index = 1
 scale = Vector2(0.5457317, 0.5457317)
 script = ExtResource("2_101bi")
+HitEffectScene = ExtResource("2_61vf2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=226541687]
 texture = ExtResource("1_c63lf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366279201]
-position = Vector2(0, -64.13408)
+position = Vector2(-1.8324022, 3.6648035)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("CircleShape2D_3ve06")
+
+[node name="Hammer" parent="." unique_id=1149031432 instance=ExtResource("4_61vf2")]
+z_index = 99
 
 [connection signal="input_event" from="." to="." method="OnHit"]
