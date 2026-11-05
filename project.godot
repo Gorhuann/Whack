@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 
 NavigationManager="*uid://cpwf6a35ayj0y"
 StatManager="*uid://dx481soqr1kat"
+CameraManager="*uid://1rs6bi25b8fq"
 
 [display]
 
