@@ -10,6 +10,7 @@ public partial class Mole : Area2D
 
     [Export] private Node2D SpawnPoint { get; set; }
     [Export] private Node2D EndPoint { get; set; }
+    [Export] public PackedScene HitEffectScene { get; set; }
     
     public override void _Process(double delta)
     {
@@ -32,6 +33,7 @@ public partial class Mole : Area2D
         {
             if (_isDying) return;
             _isDying = true;
+            this.AddChild(HitEffectScene.Instantiate());
         }
     }
 }

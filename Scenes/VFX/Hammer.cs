@@ -1,10 +1,12 @@
 using Godot;
 using System;
 
+namespace Whack.Scenes.VFX;
+
 public partial class Hammer : Node2D
 {
 	[Export] public float AnimBaseAngle = 0f;
-	[Export] public float AnimHitAngle = 45f;
+	[Export] public float AnimHitAngle = -90f;
 	[Export] public float AnimSpeed = 0.05f;
 	[Export] public float AnimRecoverSpeed = 0.15f;
 	
@@ -23,12 +25,20 @@ public partial class Hammer : Node2D
 		GlobalPosition = GetGlobalMousePosition();
 	}
 
+	public override void _UnhandledInput(InputEvent @event)
+	{
+		if (Input.IsActionPressed("mouse_left"))
+		{
+			Hit();
+		}
+	}
+
 	private void Hit()
 	{
 		_tween?.Kill();
 
 		_tween = CreateTween();
-		_tween.TweenProperty(this, "Rotation", AnimHitAngle, AnimSpeed).SetTrans(Tween.TransitionType.Quad).SetEase(Tween.EaseType.In);
-		_tween.TweenProperty(this, "rotation", AnimBaseAngle, AnimRecoverSpeed).SetTrans(Tween.TransitionType.Back).SetEase(Tween.EaseType.Out);
+		_tween.TweenProperty(this, "rotation_degrees", AnimHitAngle, AnimSpeed).SetTrans(Tween.TransitionType.Quad).SetEase(Tween.EaseType.In);
+		_tween.TweenProperty(this, "rotation_degrees", AnimBaseAngle, AnimRecoverSpeed).SetTrans(Tween.TransitionType.Back).SetEase(Tween.EaseType.Out);
 	}
 }
