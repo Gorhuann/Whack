@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://cj1tafl638acw"]
+
+[ext_resource type="Script" uid="uid://buedqpvqidehk" path="res://Scenes/UI/Stat/Script/StatViewController.cs" id="1_cbw7t"]
+
+[node name="Stat" type="Control" unique_id=1484029318 node_paths=PackedStringArray("Money", "MoleKilled", "BestCombo", "LastCombo", "BaseMultiplier", "HammerMultiplier", "MoleMultiplier")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbw7t")
+Money = NodePath("VBoxContainer/Money/Amount")
+MoleKilled = NodePath("VBoxContainer/Mole Killed/Amount")
+BestCombo = NodePath("VBoxContainer/Best Combo/Amount")
+LastCombo = NodePath("VBoxContainer/Last Combo/Amount")
+BaseMultiplier = NodePath("VBoxContainer/Base Multiplier/Amount")
+HammerMultiplier = NodePath("VBoxContainer/Hammer Multiplier/Amount")
+MoleMultiplier = NodePath("VBoxContainer/Mole multiplier/Amount")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=851351059]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 185.0
+
+[node name="Money" type="HBoxContainer" parent="VBoxContainer" unique_id=1719777562]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Money" unique_id=2129215890]
+layout_mode = 2
+text = "Money :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Money" unique_id=272466429]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[node name="Mole Killed" type="HBoxContainer" parent="VBoxContainer" unique_id=953274374]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Mole Killed" unique_id=879928036]
+layout_mode = 2
+text = "Mole Killed :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Mole Killed" unique_id=1128513321]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[node name="Best Combo" type="HBoxContainer" parent="VBoxContainer" unique_id=1091865104]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Best Combo" unique_id=543854552]
+layout_mode = 2
+text = "Best Combo :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Best Combo" unique_id=921051784]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[node name="Last Combo" type="HBoxContainer" parent="VBoxContainer" unique_id=132178798]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Last Combo" unique_id=1280500636]
+layout_mode = 2
+text = "Last Combo :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Last Combo" unique_id=13222419]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[node name="Base Multiplier" type="HBoxContainer" parent="VBoxContainer" unique_id=345666112]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Base Multiplier" unique_id=136611490]
+layout_mode = 2
+text = "Base Multiplier :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Base Multiplier" unique_id=314293056]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[node name="Hammer Multiplier" type="HBoxContainer" parent="VBoxContainer" unique_id=1975174010]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Hammer Multiplier" unique_id=1003438290]
+layout_mode = 2
+text = "Hammer Multiplier :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Hammer Multiplier" unique_id=1939979877]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[node name="Mole multiplier" type="HBoxContainer" parent="VBoxContainer" unique_id=750992225]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Mole multiplier" unique_id=939915969]
+layout_mode = 2
+text = "Mole multiplier :"
+
+[node name="Amount" type="Label" parent="VBoxContainer/Mole multiplier" unique_id=1775567258]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatResource" format=3 uid="uid://1hkbb75xan6k"]
+
+[ext_resource type="Script" uid="uid://krq2bpm7o7y3" path="res://Scenes/UI/Stat/Script/StatResource.cs" id="1_310n5"]
+
+[resource]
+script = ExtResource("1_310n5")
+BaseMultiplier = 0.02
+HammerMultiplier = 1.0
+MoleMultiplier = 1.0
+metadata/_custom_type_script = "uid://krq2bpm7o7y3"

@@ -9,23 +9,26 @@
 script = ExtResource("1_ryxxg")
 
 [node name="TrouHaut" type="Sprite2D" parent="." unique_id=537492730]
-position = Vector2(0, -2.6450007)
-scale = Vector2(0.21688974, 0.29322973)
+position = Vector2(0, 3.7499998)
+scale = Vector2(0.185, 0.25)
 texture = ExtResource("2_cxpc7")
 
 [node name="TrouBas" type="Sprite2D" parent="." unique_id=388846404]
 z_index = 2
-position = Vector2(0, 123)
-scale = Vector2(0.21688974, 0.29322973)
+position = Vector2(0, 109.25322)
+scale = Vector2(0.185, 0.25)
 texture = ExtResource("1_seffn")
 
 [node name="Mole" parent="." unique_id=375732160 node_paths=PackedStringArray("SpawnPoint", "EndPoint") instance=ExtResource("4_ryxxg")]
-position = Vector2(0, 184.00003)
+position = Vector2(0, -13.999999)
+scale = Vector2(0.4, 0.4)
 SpawnPoint = NodePath("../SpawnPoint")
 EndPoint = NodePath("../EndPoint")
 
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=50187581]
-position = Vector2(0, 183)
+position = Vector2(0, 162.85822)
+scale = Vector2(0.185, 0.25)
 
 [node name="EndPoint" type="Node2D" parent="." unique_id=236795314]
-position = Vector2(0, -24.858215)
+position = Vector2(0, -14)
+scale = Vector2(0.185, 0.25)

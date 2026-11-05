@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 [autoload]
 
 NavigationManager="*uid://cpwf6a35ayj0y"
+StatManager="*uid://dx481soqr1kat"
 
 [display]
 
