@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoleResource" format=3 uid="uid://cj5687iybkklj"]
+
+[ext_resource type="PackedScene" uid="uid://ksebe64elnho" path="res://Moles/Script/Concrete/Basic/Basic.tscn" id="1_kkrmq"]
+[ext_resource type="PackedScene" uid="uid://cov23e4kkvdgu" path="res://Moles/Script/Concrete/Knight/Knight.tscn" id="2_r0fx6"]
+[ext_resource type="Script" uid="uid://bnpnfjgjeebey" path="res://Moles/Script/MoleResource.cs" id="3_de3y8"]
+
+[resource]
+script = ExtResource("3_de3y8")
+ConcreteMole = Dictionary[int, PackedScene]({
+0: ExtResource("1_kkrmq"),
+1: ExtResource("2_r0fx6")
+})
+metadata/_custom_type_script = "uid://bnpnfjgjeebey"

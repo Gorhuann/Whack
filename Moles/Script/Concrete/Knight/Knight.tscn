@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cov23e4kkvdgu"]
+
+[ext_resource type="Script" uid="uid://bugi3clq0bq3h" path="res://Moles/Script/Concrete/Knight/Knight.cs" id="1_yj5ye"]
+[ext_resource type="PackedScene" uid="uid://cayymhk7g185u" path="res://Scenes/VFX/HitEffect.tscn" id="2_d453m"]
+[ext_resource type="Texture2D" uid="uid://booivaud6kb7m" path="res://Moles/Textures/knight.png" id="3_yj5ye"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
+radius = 111.79153
+
+[node name="Knight" type="Area2D" unique_id=571088668]
+z_index = 1
+scale = Vector2(0.5457317, 0.5457317)
+script = ExtResource("1_yj5ye")
+HitEffectScene = ExtResource("2_d453m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226541687]
+position = Vector2(-25.653622, -29.318441)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_yj5ye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366279201]
+position = Vector2(-1.8324022, 3.6648035)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("CircleShape2D_3ve06")
+
+[connection signal="input_event" from="." to="." method="OnHit"]

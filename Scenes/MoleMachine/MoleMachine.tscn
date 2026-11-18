@@ -23,36 +23,39 @@ z_index = 1
 position = Vector2(227, -177)
 
 [node name="Hole A1" parent="firstLayer" unique_id=1366338958 instance=ExtResource("1_uv8pj")]
-position = Vector2(-201, 0)
+position = Vector2(-201, 139)
 
 [node name="Hole A2" parent="firstLayer" unique_id=1365827567 instance=ExtResource("1_uv8pj")]
+position = Vector2(0, 139)
 
 [node name="Hole A3" parent="firstLayer" unique_id=400154958 instance=ExtResource("1_uv8pj")]
-position = Vector2(202, 0)
+position = Vector2(202, 139)
 
 [node name="secondLayer" type="Node2D" parent="." unique_id=629044887]
 z_index = 3
 position = Vector2(227, 16)
 
 [node name="Hole B1" parent="secondLayer" unique_id=689845758 instance=ExtResource("1_uv8pj")]
-position = Vector2(-201, 0)
+position = Vector2(-201, 139)
 
 [node name="Hole B2" parent="secondLayer" unique_id=1175417711 instance=ExtResource("1_uv8pj")]
+position = Vector2(0, 139)
 
 [node name="Hole B3" parent="secondLayer" unique_id=1064788338 instance=ExtResource("1_uv8pj")]
-position = Vector2(202, 0)
+position = Vector2(202, 139)
 
 [node name="thirdLayer" type="Node2D" parent="." unique_id=1913778663]
 z_index = 5
 position = Vector2(227, 222)
 
 [node name="Hole C1" parent="thirdLayer" unique_id=393441943 instance=ExtResource("1_uv8pj")]
-position = Vector2(-201, 0)
+position = Vector2(-201, 139)
 
 [node name="Hole C2" parent="thirdLayer" unique_id=1336893725 instance=ExtResource("1_uv8pj")]
+position = Vector2(0, 139)
 
 [node name="Hole C3" parent="thirdLayer" unique_id=1651216700 instance=ExtResource("1_uv8pj")]
-position = Vector2(202, 0)
+position = Vector2(202, 139)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1378683808]
 offset_left = -581.0

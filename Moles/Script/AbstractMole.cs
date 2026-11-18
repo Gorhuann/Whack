@@ -3,11 +3,8 @@ using Whack.Managers;
 
 namespace Whack.Moles.Script;
 
-public partial class Mole : Area2D
+public abstract partial class AbstractMole : Area2D
 {
-    [Export] private Node2D SpawnPoint { get; set; }
-    [Export] private Node2D EndPoint { get; set; }
-
     private StatManager StatManager => StatManager.Instance;
     private CameraManager CameraManager => CameraManager.Instance;
 
@@ -15,20 +12,21 @@ public partial class Mole : Area2D
     private Tween _dyingTween;
     private Tween _ascendingTween;
 
+    private Vector2 _startPosition;
+    private float _jumpDistance = 175f;
+    
+    protected MoleType Type;
+    
     [Export] public PackedScene HitEffectScene { get; set; }
+
+    protected abstract void OnHit(Node viewport, InputEvent evt, int shapeId);
 
     public override void _Ready()
     {
-        Position = SpawnPoint.Position;
+        _startPosition = Position;
         var startingTween = CreateTween();
         startingTween.TweenInterval(GD.RandRange(0.0, 5.0));
         startingTween.TweenCallback(Callable.From(Ascend));
-    }
-
-    private void OnHit(Node viewport, InputEvent evt, int shapeId)
-    {
-        if (Input.IsActionPressed("mouse_left"))
-            Die();
     }
 
     private void Ascend()
@@ -36,10 +34,10 @@ public partial class Mole : Area2D
         _isDying = false;
         _ascendingTween?.Kill();
         _ascendingTween = CreateTween();
-        _ascendingTween.TweenProperty(this, "position", EndPoint.Position, 1.5).SetTrans(Tween.TransitionType.Elastic).SetEase(Tween.EaseType.Out);
+        _ascendingTween.TweenProperty(this, "position", new Vector2(_startPosition.X, _startPosition.Y - _jumpDistance), 1.5).SetTrans(Tween.TransitionType.Elastic).SetEase(Tween.EaseType.Out);
     }
 
-    private void Die()
+    protected void Die()
     {
         if (_isDying) return;
         _isDying = true;
@@ -52,8 +50,8 @@ public partial class Mole : Area2D
         _ascendingTween?.Kill();
         _dyingTween?.Kill();
         _dyingTween = CreateTween();
-        _dyingTween.TweenProperty(this, "position", SpawnPoint.Position, 1).SetTrans(Tween.TransitionType.Bounce).SetEase(Tween.EaseType.Out);
+        _dyingTween.TweenProperty(this, "position", new Vector2(_startPosition.X, _startPosition.Y + _jumpDistance), 1).SetTrans(Tween.TransitionType.Bounce).SetEase(Tween.EaseType.Out);
         _dyingTween.TweenInterval(GD.RandRange(0.0, 5.0));
-        _dyingTween.TweenCallback(Callable.From(Ascend));
+        _dyingTween.TweenCallback(Callable.From(QueueFree));
     }
 }
