@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ksebe64elnho"]
+
+[ext_resource type="Script" uid="uid://d4jt2gy16lqui" path="res://Moles/Script/Concrete/Basic/Basic.cs" id="1_3uiro"]
+[ext_resource type="PackedScene" uid="uid://cayymhk7g185u" path="res://Scenes/VFX/HitEffect.tscn" id="2_rshl2"]
+[ext_resource type="Texture2D" uid="uid://uhv3u6xswjts" path="res://Moles/Textures/mole.png" id="3_cghrc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
+radius = 137.43013
+
+[node name="Basic" type="Area2D" unique_id=571088668]
+z_index = 1
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_3uiro")
+HitEffectScene = ExtResource("2_rshl2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226541687]
+texture = ExtResource("3_cghrc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366279201]
+position = Vector2(-1.8324022, 3.6648035)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("CircleShape2D_3ve06")
+
+[connection signal="input_event" from="." to="." method="OnHit"]
