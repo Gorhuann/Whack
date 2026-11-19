@@ -10,7 +10,7 @@ public partial class Hole : Node
     [Export] private MoleList _moleList;
 
     private RandomNumberGenerator _randomNumberGenerator;
-    private List<float> _moleWeights = new();
+    private readonly List<float> _moleWeights = [];
     public AbstractMole Mole { get; private set; }
 
     public override void _Ready()
