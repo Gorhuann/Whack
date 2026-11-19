@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MoleResource" format=3 uid="uid://doulyl7kjkc5q"]
+
+[ext_resource type="Script" uid="uid://b5ypgjb1ldgvj" path="res://Moles/Script/MoleResource.cs" id="1_lvxte"]
+[ext_resource type="PackedScene" uid="uid://ksebe64elnho" path="res://Moles/Script/Concrete/Basic/Basic.tscn" id="1_vphwb"]
+
+[resource]
+script = ExtResource("1_lvxte")
+Scene = ExtResource("1_vphwb")
+Weight = 5.0
+metadata/_custom_type_script = "uid://b5ypgjb1ldgvj"
