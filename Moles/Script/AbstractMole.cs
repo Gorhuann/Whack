@@ -14,16 +14,18 @@ public abstract partial class AbstractMole : Area2D
 
     private Vector2 _startPosition;
     private float _jumpDistance = 175f;
-    
+
     protected MoleType Type;
-    
+
     [Export] public PackedScene HitEffectScene { get; set; }
+    [Export] public CollisionShape2D CollisionShape { get; set; }
 
     protected abstract void OnHit(Node viewport, InputEvent evt, int shapeId);
 
     public override void _Ready()
     {
         _startPosition = Position;
+        CollisionShape.Disabled = true;
         var startingTween = CreateTween();
         startingTween.TweenInterval(GD.RandRange(0.0, 5.0));
         startingTween.TweenCallback(Callable.From(Ascend));
@@ -35,7 +37,13 @@ public abstract partial class AbstractMole : Area2D
         _ascendingTween?.Kill();
         _ascendingTween = CreateTween();
         _ascendingTween.TweenProperty(this, "position", new Vector2(_startPosition.X, _startPosition.Y - _jumpDistance), 1.5).SetTrans(Tween.TransitionType.Elastic).SetEase(Tween.EaseType.Out);
+
+        var enableHitTween = CreateTween();
+        enableHitTween.TweenInterval(1);
+        enableHitTween.TweenCallback(Callable.From(ToggleCollision));
     }
+
+    private void ToggleCollision() => CollisionShape.Disabled = false;
 
     protected void Die()
     {

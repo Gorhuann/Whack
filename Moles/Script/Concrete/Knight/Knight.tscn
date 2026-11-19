@@ -7,11 +7,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
 radius = 71.48716
 
-[node name="Knight" type="Area2D" unique_id=571088668]
-z_index = 1
+[node name="Knight" type="Area2D" unique_id=571088668 node_paths=PackedStringArray("CollisionShape")]
 scale = Vector2(0.5457317, 0.5457317)
 script = ExtResource("1_yj5ye")
 HitEffectScene = ExtResource("2_d453m")
+CollisionShape = NodePath("CollisionShape2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=226541687]
 position = Vector2(-25.653622, -29.318441)

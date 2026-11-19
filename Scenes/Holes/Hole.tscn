@@ -16,7 +16,6 @@ scale = Vector2(0.185, 0.25)
 texture = ExtResource("2_cxpc7")
 
 [node name="TrouBas" type="Sprite2D" parent="." unique_id=388846404]
-z_index = 2
 position = Vector2(-0.35499573, -53.75)
 scale = Vector2(0.185, 0.25)
 texture = ExtResource("1_seffn")
