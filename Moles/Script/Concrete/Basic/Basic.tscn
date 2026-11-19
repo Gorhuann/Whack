@@ -7,11 +7,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
 radius = 82.499985
 
-[node name="Basic" type="Area2D" unique_id=571088668]
-z_index = 1
+[node name="Basic" type="Area2D" unique_id=571088668 node_paths=PackedStringArray("CollisionShape")]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_3uiro")
 HitEffectScene = ExtResource("2_rshl2")
+CollisionShape = NodePath("CollisionShape2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=226541687]
 texture = ExtResource("3_cghrc")

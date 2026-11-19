@@ -24,6 +24,7 @@ public partial class Hole : Node
 
         _moleScene = _moleResource.ConcreteMole[moleType].Instantiate();
         AddChild(_moleScene);
+        MoveChild(_moleScene, 1);
         _moleScene.TreeExited += HandleMoleDied;
     }
 
