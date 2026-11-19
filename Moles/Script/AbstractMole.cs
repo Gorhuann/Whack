@@ -39,7 +39,7 @@ public abstract partial class AbstractMole : Area2D
         _ascendingTween.TweenProperty(this, "position", new Vector2(_startPosition.X, _startPosition.Y - _jumpDistance), 1.5).SetTrans(Tween.TransitionType.Elastic).SetEase(Tween.EaseType.Out);
 
         var enableHitTween = CreateTween();
-        enableHitTween.TweenInterval(1);
+        enableHitTween.TweenInterval(0.5);
         enableHitTween.TweenCallback(Callable.From(ToggleCollision));
     }
 

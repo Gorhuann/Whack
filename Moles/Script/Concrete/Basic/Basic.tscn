@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://uhv3u6xswjts" path="res://Moles/Textures/mole.png" id="3_cghrc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
-radius = 82.499985
+radius = 105.02973
 
 [node name="Basic" type="Area2D" unique_id=571088668 node_paths=PackedStringArray("CollisionShape")]
 scale = Vector2(0.4, 0.4)
@@ -17,7 +17,7 @@ CollisionShape = NodePath("CollisionShape2D")
 texture = ExtResource("3_cghrc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366279201]
-position = Vector2(0, -30)
+position = Vector2(0, -40)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("CircleShape2D_3ve06")
 
