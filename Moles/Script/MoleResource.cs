@@ -1,17 +1,20 @@
 using Godot;
-using Godot.Collections;
 
 namespace Whack.Moles.Script;
 
 [GlobalClass]
 public partial class MoleResource : Resource
 {
-    [Export] public Dictionary<MoleType, PackedScene> ConcreteMole;
-    
-    public MoleResource() : this(new Dictionary<MoleType, PackedScene>()) { }
+    [Export] public PackedScene Scene;
+    [Export] public float Weight;
 
-    public MoleResource(Dictionary<MoleType, PackedScene> newConcreteMole)
+    public MoleResource() : this(new PackedScene(), 0f)
     {
-        ConcreteMole = newConcreteMole;
+    }
+
+    public MoleResource(PackedScene newScene, float newWeight)
+    {
+        Scene = newScene;
+        Weight = newWeight;
     }
 }

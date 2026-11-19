@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MoleList" format=3 uid="uid://cj5687iybkklj"]
+
+[ext_resource type="Resource" uid="uid://doulyl7kjkc5q" path="res://Moles/Script/Concrete/Basic/BasicResource.tres" id="1_nwvmg"]
+[ext_resource type="Script" uid="uid://oet4x7qyh4s6" path="res://Moles/Script/MoleList.cs" id="1_oysm1"]
+[ext_resource type="Resource" uid="uid://cu38dotg5f186" path="res://Moles/Script/Concrete/Knight/KnightResource.tres" id="2_3clyn"]
+
+[resource]
+script = ExtResource("1_oysm1")
+ConcreteMole = Array[Object]([ExtResource("1_nwvmg"), ExtResource("2_3clyn")])
+metadata/_custom_type_script = "uid://bnpnfjgjeebey"

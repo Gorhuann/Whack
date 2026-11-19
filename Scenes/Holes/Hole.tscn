@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bmgkywgusvoer" path="res://Scenes/Holes/Script/Hole.cs" id="1_ryxxg"]
 [ext_resource type="Texture2D" uid="uid://cqb4xa0igcg67" path="res://Scenes/MoleMachine/Textures/trou_bas.png" id="1_seffn"]
 [ext_resource type="Texture2D" uid="uid://so6yaq2xqqm0" path="res://Scenes/MoleMachine/Textures/trou_haut.png" id="2_cxpc7"]
-[ext_resource type="Resource" uid="uid://cj5687iybkklj" path="res://Moles/Script/Concrete/MoleResource.tres" id="2_ryxxg"]
+[ext_resource type="Resource" uid="uid://cj5687iybkklj" path="res://Moles/MoleList.tres" id="2_ryxxg"]
 
 [node name="Hole" type="Node2D" unique_id=1366338958 node_paths=PackedStringArray("_spawnPoint")]
 script = ExtResource("1_ryxxg")
 _spawnPoint = NodePath("SpawnPoint")
-_moleResource = ExtResource("2_ryxxg")
+_moleList = ExtResource("2_ryxxg")
 
 [node name="TrouHaut" type="Sprite2D" parent="." unique_id=537492730]
 position = Vector2(-0.35499573, -159.25322)
