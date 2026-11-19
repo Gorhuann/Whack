@@ -9,7 +9,7 @@ public partial class Hole : Node
     [Export] private Node2D _spawnPoint;
     [Export] private MoleResource _moleResource;
 
-    private Node _moleScene;
+    public AbstractMole Mole { get; private set; }
 
     public override void _Ready()
     {
@@ -17,21 +17,21 @@ public partial class Hole : Node
         CreateRandomMole();
     }
 
-    public void CreateRandomMole()
+    private void CreateRandomMole()
     {
         var randomMole = GD.RandRange(0, Enum.GetNames(typeof(MoleType)).Length - 1);
         var moleType = (MoleType)randomMole;
 
-        _moleScene = _moleResource.ConcreteMole[moleType].Instantiate();
-        AddChild(_moleScene);
-        MoveChild(_moleScene, 1);
-        _moleScene.TreeExited += HandleMoleDied;
+        Mole = _moleResource.ConcreteMole[moleType].Instantiate<AbstractMole>();
+        AddChild(Mole);
+        MoveChild(Mole, 1);
+        Mole.TreeExited += HandleMoleDied;
     }
 
     private void HandleMoleDied()
     {
-        _moleScene.TreeExited -= HandleMoleDied;
-        _moleScene.QueueFree();
+        Mole.TreeExited -= HandleMoleDied;
+        Mole.QueueFree();
         CreateRandomMole();
     }
 }
