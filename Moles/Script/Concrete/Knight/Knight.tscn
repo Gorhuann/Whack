@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://booivaud6kb7m" path="res://Moles/Textures/knight.png" id="3_yj5ye"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ve06"]
-radius = 111.79153
+radius = 71.48716
 
 [node name="Knight" type="Area2D" unique_id=571088668]
 z_index = 1
@@ -19,7 +19,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_yj5ye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1366279201]
-position = Vector2(-1.8324022, 3.6648035)
+position = Vector2(-1.8324022, -27.486029)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("CircleShape2D_3ve06")
 
